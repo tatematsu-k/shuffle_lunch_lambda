@@ -1,0 +1,33 @@
+# https://aws.amazon.com/jp/blogs/compute/announcing-ruby-support-for-aws-lambda/
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'sample ruby application'
+
+Resources:
+  HelloRubyRecordFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hello_ruby_record.put_item
+      Runtime: ruby2.5
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName: !Ref RubyExampleDDBTable 
+      Environment:
+        Variables:
+          DDB_TABLE: !Ref RubyExampleDDBTable
+
+  RubyExampleDDBTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+
+Outputs:
+  HelloRubyRecordFunction:
+    Description: Hello Ruby Record Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - HelloRubyRecordFunction
+      - Arn
+
