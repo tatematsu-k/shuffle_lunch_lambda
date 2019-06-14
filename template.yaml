@@ -7,7 +7,7 @@ Resources:
   HelloRubyRecordFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: hello_ruby_record.put_item
+      Handler: src/sample_lambda_function.lambda_handler
       Runtime: ruby2.5
       Policies:
       - DynamoDBCrudPolicy:
