@@ -15,6 +15,12 @@ Resources:
       Environment:
         Variables:
           DDB_TABLE: !Ref RubyExampleDDBTable
+      Events:
+        HttpGet:
+          Type: Api
+          Properties:
+            Path: '/users'
+            Method: get
 
   RubyExampleDDBTable:
     Type: AWS::Serverless::SimpleTable
