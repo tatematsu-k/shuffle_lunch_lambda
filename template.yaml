@@ -30,6 +30,48 @@ Resources:
         Type: String
       TableName: "shuffleLunchUserTable"
 
+  shuffleLunchImplementationTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "shuffleLunchImplementationTable"
+      AttributeDefinitions:
+        -
+          AttributeName: "rotation_id"
+          AttributeType: "N"
+        -
+          AttributeName: "shuffle_lunch_group_id"
+          AttributeType: "S"
+        -
+          AttributeName: "user_email"
+          AttributeType: "S"
+      KeySchema:
+        -
+          AttributeName: "shuffle_lunch_group_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "user_email"
+          KeyType: "RANGE"
+      ProvisionedThroughput:
+        ReadCapacityUnits: "5"
+        WriteCapacityUnits: "5"
+      GlobalSecondaryIndexes:
+        -
+          IndexName: "shuffleLunchImplementationTableGSI1"
+          KeySchema:
+            -
+              AttributeName: "rotation_id"
+              KeyType: "HASH"
+            -
+              AttributeName: "user_email"
+              KeyType: "RANGE"
+          Projection:
+            NonKeyAttributes:
+              - "shuffle_lunch_group_id"
+            ProjectionType: "INCLUDE"
+          ProvisionedThroughput:
+            ReadCapacityUnits: "5"
+            WriteCapacityUnits: "5"
+
 Outputs:
   GetShuffleLunchUsersFunction:
     Description: GET all shuffle_lunch_users Lambda Function ARN
