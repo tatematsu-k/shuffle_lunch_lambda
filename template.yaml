@@ -11,10 +11,10 @@ Resources:
       Runtime: ruby2.5
       Policies:
       - DynamoDBCrudPolicy:
-          TableName: !Ref RubyExampleDDBTable
+          TableName: !Ref shuffleLunchUserTable
       Environment:
         Variables:
-          DDB_TABLE: !Ref RubyExampleDDBTable
+          DDB_TABLE: !Ref shuffleLunchUserTable
       Events:
         HttpGet:
           Type: Api
@@ -22,12 +22,13 @@ Resources:
             Path: '/users'
             Method: get
 
-  RubyExampleDDBTable:
+  shuffleLunchUserTable:
     Type: AWS::Serverless::SimpleTable
     Properties:
       PrimaryKey:
-        Name: id
+        Name: email
         Type: String
+      TableName: "shuffleLunchUserTable"
 
 Outputs:
   GetShuffleLunchUsersFunction:
