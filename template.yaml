@@ -14,7 +14,8 @@ Resources:
           TableName: !Ref shuffleLunchUserTable
       Environment:
         Variables:
-          DDB_TABLE: !Ref shuffleLunchUserTable
+          USER_TABLE: !Ref shuffleLunchUserTable
+          IMPLEMENTATION_TABLE: !Ref shuffleLunchImplementationTable
       Events:
         HttpGet:
           Type: Api
