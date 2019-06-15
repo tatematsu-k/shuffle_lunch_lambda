@@ -16,6 +16,7 @@ Resources:
         Variables:
           USER_TABLE: !Ref shuffleLunchUserTable
           IMPLEMENTATION_TABLE: !Ref shuffleLunchImplementationTable
+          ROTATION_TABLE: !Ref shuffleLunchRoutationTable
       Events:
         HttpGet:
           Type: Api
@@ -30,6 +31,20 @@ Resources:
         Name: email
         Type: String
       TableName: "shuffleLunchUserTable"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
+  shuffleLunchRoutationTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: rotation_id
+        Type: Number
+      TableName: "shuffleLunchRoutationTable"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
 
   shuffleLunchImplementationTable:
     Type: AWS::DynamoDB::Table
