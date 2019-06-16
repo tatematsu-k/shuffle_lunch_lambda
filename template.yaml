@@ -56,7 +56,7 @@ Resources:
           AttributeType: "S"
       KeySchema:
         -
-          AttributeName: "rotation_id"
+          AttributeName: "lunch_group"
           KeyType: "HASH"
         -
           AttributeName: "user_email"
@@ -66,7 +66,7 @@ Resources:
           IndexName: "candidateGSI_1"
           KeySchema:
             -
-              AttributeName: "lunch_group"
+              AttributeName: "rotation_id"
               KeyType: "HASH"
             -
               AttributeName: "user_email"
