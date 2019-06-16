@@ -4,10 +4,10 @@ Transform: AWS::Serverless-2016-10-31
 Description: 'shuffle lunch group'
 
 Resources:
-  GetShuffleLunchUsersFunction:
+  PostShuffleLunchUsersFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/handlers/shuffle_lunch_group_lambda_function.lambda_handler
+      Handler: src/handlers/user_lambda_function.create_handler
       Runtime: ruby2.5
       Policies:
       - DynamoDBCrudPolicy:
@@ -15,14 +15,12 @@ Resources:
       Environment:
         Variables:
           USER_TABLE: !Ref shuffleLunchUserTable
-          IMPLEMENTATION_TABLE: !Ref shuffleLunchImplementationTable
-          ROTATION_TABLE: !Ref shuffleLunchRoutationTable
       Events:
         HttpGet:
           Type: Api
           Properties:
-            Path: '/users'
-            Method: get
+            Path: '/user'
+            Method: post
 
   shuffleLunchUserTable:
     Type: AWS::Serverless::SimpleTable
@@ -89,10 +87,10 @@ Resources:
             WriteCapacityUnits: "5"
 
 Outputs:
-  GetShuffleLunchUsersFunction:
-    Description: GET all shuffle_lunch_users Lambda Function ARN
+  PostShuffleLunchUsersFunction:
+    Description: POST shuffle_lunch_users Lambda Function ARN
     Value:
       Fn::GetAtt:
-      - GetShuffleLunchUsersFunction
+      - PostShuffleLunchUsersFunction
       - Arn
 
