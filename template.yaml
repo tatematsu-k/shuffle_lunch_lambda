@@ -33,6 +33,9 @@ Resources:
         -
           AttributeName: "user_email"
           AttributeType: "S"
+        -
+          AttributeName: "lunch_group"
+          AttributeType: "S"
       KeySchema:
         -
           AttributeName: "rotation_id"
@@ -40,51 +43,24 @@ Resources:
         -
           AttributeName: "user_email"
           KeyType: "RANGE"
-      ProvisionedThroughput:
-        ReadCapacityUnits: "5"
-        WriteCapacityUnits: "5"
-
-  shuffleLunchImplementationTable:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      TableName: "shuffleLunchImplementationTable"
-      AttributeDefinitions:
-        -
-          AttributeName: "rotation_id"
-          AttributeType: "N"
-        -
-          AttributeName: "shuffle_lunch_group_id"
-          AttributeType: "S"
-        -
-          AttributeName: "user_email"
-          AttributeType: "S"
-      KeySchema:
-        -
-          AttributeName: "shuffle_lunch_group_id"
-          KeyType: "HASH"
-        -
-          AttributeName: "user_email"
-          KeyType: "RANGE"
-      ProvisionedThroughput:
-        ReadCapacityUnits: "5"
-        WriteCapacityUnits: "5"
       GlobalSecondaryIndexes:
         -
-          IndexName: "shuffleLunchImplementationTableGSI1"
+          IndexName: "candidateGSI_1"
           KeySchema:
             -
-              AttributeName: "rotation_id"
+              AttributeName: "lunch_group"
               KeyType: "HASH"
             -
               AttributeName: "user_email"
               KeyType: "RANGE"
           Projection:
-            NonKeyAttributes:
-              - "shuffle_lunch_group_id"
-            ProjectionType: "INCLUDE"
+            ProjectionType: KEYS_ONLY
           ProvisionedThroughput:
-            ReadCapacityUnits: "5"
-            WriteCapacityUnits: "5"
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      ProvisionedThroughput:
+        ReadCapacityUnits: "5"
+        WriteCapacityUnits: "5"
 
 Outputs:
   PostShuffleLunchCandidatesFunction:
