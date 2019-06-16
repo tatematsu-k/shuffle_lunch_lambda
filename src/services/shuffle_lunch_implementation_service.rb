@@ -1,2 +1,0 @@
-class ShuffleLunchImplementationService
-end

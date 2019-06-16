@@ -22,6 +22,24 @@ Resources:
             Path: '/candidate'
             Method: post
 
+  AssignShuffleLunchCandidatesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/candidate_lambda_function.assign_handler
+      Runtime: ruby2.5
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName: !Ref shuffleLunchCandidateTable
+      Environment:
+        Variables:
+          CANDIDATE_TABLE: !Ref shuffleLunchCandidateTable
+      Events:
+        HttpGet:
+          Type: Api
+          Properties:
+            Path: '/assign_candidate'
+            Method: post
+
   shuffleLunchCandidateTable:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -69,4 +87,9 @@ Outputs:
       Fn::GetAtt:
       - PostShuffleLunchCandidatesFunction
       - Arn
-
+  AssignShuffleLunchCandidatesFunction:
+    Description: POST assign shuffle_lunch_candidates Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - AssignShuffleLunchCandidatesFunction
+      - Arn
