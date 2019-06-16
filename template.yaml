@@ -4,45 +4,45 @@ Transform: AWS::Serverless-2016-10-31
 Description: 'shuffle lunch group'
 
 Resources:
-  PostShuffleLunchUsersFunction:
+  PostShuffleLunchCandidatesFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/handlers/user_lambda_function.create_handler
+      Handler: src/handlers/candidate_lambda_function.create_handler
       Runtime: ruby2.5
       Policies:
       - DynamoDBCrudPolicy:
-          TableName: !Ref shuffleLunchUserTable
+          TableName: !Ref shuffleLunchCandidateTable
       Environment:
         Variables:
-          USER_TABLE: !Ref shuffleLunchUserTable
+          CANDIDATE_TABLE: !Ref shuffleLunchCandidateTable
       Events:
         HttpGet:
           Type: Api
           Properties:
-            Path: '/user'
+            Path: '/candidate'
             Method: post
 
-  shuffleLunchUserTable:
-    Type: AWS::Serverless::SimpleTable
+  shuffleLunchCandidateTable:
+    Type: AWS::DynamoDB::Table
     Properties:
-      PrimaryKey:
-        Name: email
-        Type: String
-      TableName: "shuffleLunchUserTable"
+      TableName: "shuffleLunchCandidateTable"
+      AttributeDefinitions:
+        -
+          AttributeName: "rotation_id"
+          AttributeType: "N"
+        -
+          AttributeName: "user_email"
+          AttributeType: "S"
+      KeySchema:
+        -
+          AttributeName: "rotation_id"
+          KeyType: "HASH"
+        -
+          AttributeName: "user_email"
+          KeyType: "RANGE"
       ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
-
-  shuffleLunchRoutationTable:
-    Type: AWS::Serverless::SimpleTable
-    Properties:
-      PrimaryKey:
-        Name: rotation_id
-        Type: Number
-      TableName: "shuffleLunchRoutationTable"
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
+        ReadCapacityUnits: "5"
+        WriteCapacityUnits: "5"
 
   shuffleLunchImplementationTable:
     Type: AWS::DynamoDB::Table
@@ -87,10 +87,10 @@ Resources:
             WriteCapacityUnits: "5"
 
 Outputs:
-  PostShuffleLunchUsersFunction:
-    Description: POST shuffle_lunch_users Lambda Function ARN
+  PostShuffleLunchCandidatesFunction:
+    Description: POST shuffle_lunch_candidates Lambda Function ARN
     Value:
       Fn::GetAtt:
-      - PostShuffleLunchUsersFunction
+      - PostShuffleLunchCandidatesFunction
       - Arn
 
