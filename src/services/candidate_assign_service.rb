@@ -1,6 +1,6 @@
 require './src/models/candidate_table'
 
-class CandidateService
+class CandidateAssignService
   attr_accessor :member_count
   attr_accessor :not_assigned
   attr_accessor :assigned
