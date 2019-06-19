@@ -10,6 +10,7 @@ def create_handler(event:, context:)
 end
 
 def assign_handler(event:, context:)
-  CandidateService.new
-  { statusCode: 201, body: "test" }
+  candidate_service = CandidateService.new
+  candidate_service.assign!
+  { statusCode: 201, body: JSON.generate( { assigned: candidate_service.assigned } ) }
 end
