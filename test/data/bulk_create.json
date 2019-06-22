@@ -1,176 +1,484 @@
 {
   "candidates": [
-      {
-        "rotation_id": 1,
-        "user_email": "test1@giftee.co",
-        "info": {
-          "belongs": [
-            {
-              "name": "A",
-              "degree": 1
-            },
-            {
-              "name": "B",
-              "degree": 0.3
-            }
-          ]
-        }
-      },
-      {
-        "rotation_id": 1,
-        "user_email": "test2@giftee.co",
-        "info": {
-          "belongs": [
-            {
-              "name": "B",
-              "degree": 1
-            },
-            {
-              "name": "C",
-              "degree": 0.2
-            }
-          ]
-        }
-      },
-      {
-        "rotation_id": 1,
-        "user_email": "test3@giftee.co",
-        "info": {
-          "belongs": [
-            {
-              "name": "C",
-              "degree": 1
-            }
-          ]
-        }
-      },
-      {
-        "rotation_id": 1,
-        "user_email": "test4@giftee.co",
-        "info": {
-          "belongs": [
-            {
-              "name": "D",
-              "degree": 0.8
-            },
-            {
-              "name": "B",
-              "degree": 0.1
-            }
-          ]
-        }
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test5@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test6@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test7@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test8@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test9@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test10@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test11@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test12@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test13@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test14@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test15@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test16@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test17@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test18@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test19@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test20@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test21@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test22@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test23@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test24@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test25@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test26@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test27@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test28@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test29@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test30@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test31@giftee.co"
-      },
-      {
-          "rotation_id": 1,
-          "user_email": "test32@giftee.co"
+    {
+      "rotation_id": 1,
+      "user_email": "a_1@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
       }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_2@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_3@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_4@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_5@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_6@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_7@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_8@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_9@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "a_10@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "A",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_1@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_2@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_3@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_4@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_5@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_6@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_7@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_8@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_9@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "b_10@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "B",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_1@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_2@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_3@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_4@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_5@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_6@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_7@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_8@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_9@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "c_10@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "C",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_1@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_2@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_3@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_4@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_5@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_6@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_7@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_8@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_9@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    },
+    {
+      "rotation_id": 1,
+      "user_email": "d_10@giftee.co",
+      "info": {
+        "belongs": [
+          {
+            "name": "D",
+            "degree": 1
+          }
+        ]
+      }
+    }
   ]
 }
