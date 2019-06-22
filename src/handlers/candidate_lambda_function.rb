@@ -17,7 +17,8 @@ def bulk_create_handler(event:, context:)
 end
 
 def assign_handler(event:, context:)
-  candidate_asign_service = CandidateAssignService.new
+  params = JSON.parse(event["body"], symbolize_names: true)
+  candidate_asign_service = CandidateAssignService.new(params.slice(:member_count, :lunch_group_prefix, :team_count))
   candidate_asign_service.assign!
   { statusCode: 201, body: JSON.generate( { assigned: candidate_asign_service.assigned } ) }
 end
