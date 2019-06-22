@@ -1,4 +1,16 @@
 {
   "rotation_id": 1,
-  "user_email": "test1@giftee.co"
+  "user_email": "sample@test",
+  "info": {
+    "belongs": [
+      {
+        "name": "Solution dev",
+        "degree": 1
+      },
+      {
+        "name": "T sales",
+        "degree": 0.3
+      }
+    ]
+  }
 }
