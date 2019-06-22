@@ -88,8 +88,8 @@ class CandidateAssignService
   def set_not_assigned
     CandidateTable.query(
       index_name: 'candidateGSI_1',
-      key_condition_expression: '#test = :lunch_group',
-      expression_attribute_names: { '#test' => 'lunch_group' },
+      key_condition_expression: '#lunch_group = :lunch_group',
+      expression_attribute_names: { '#lunch_group' => 'lunch_group' },
       expression_attribute_values: { ':lunch_group' => 'not_assigned' }
     ).each do |candidate|
       not_assigned << candidate
