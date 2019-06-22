@@ -1,20 +1,64 @@
 {
   "candidates": [
       {
-          "rotation_id": 1,
-          "user_email": "test1@giftee.co"
+        "rotation_id": 1,
+        "user_email": "test1@giftee.co",
+        "info": {
+          "belongs": [
+            {
+              "name": "A",
+              "degree": 1
+            },
+            {
+              "name": "B",
+              "degree": 0.3
+            }
+          ]
+        }
       },
       {
-          "rotation_id": 1,
-          "user_email": "test2@giftee.co"
+        "rotation_id": 1,
+        "user_email": "test2@giftee.co",
+        "info": {
+          "belongs": [
+            {
+              "name": "B",
+              "degree": 1
+            },
+            {
+              "name": "C",
+              "degree": 0.2
+            }
+          ]
+        }
       },
       {
-          "rotation_id": 1,
-          "user_email": "test3@giftee.co"
+        "rotation_id": 1,
+        "user_email": "test3@giftee.co",
+        "info": {
+          "belongs": [
+            {
+              "name": "C",
+              "degree": 1
+            }
+          ]
+        }
       },
       {
-          "rotation_id": 1,
-          "user_email": "test4@giftee.co"
+        "rotation_id": 1,
+        "user_email": "test4@giftee.co",
+        "info": {
+          "belongs": [
+            {
+              "name": "D",
+              "degree": 0.8
+            },
+            {
+              "name": "B",
+              "degree": 0.1
+            }
+          ]
+        }
       },
       {
           "rotation_id": 1,

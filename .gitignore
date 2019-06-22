@@ -55,3 +55,4 @@ build-iPhoneSimulator/
 
 packaged-template.yaml
 bin/deploy.sh
+test/data/production_bulk_create.json

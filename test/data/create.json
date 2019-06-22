@@ -1,6 +1,7 @@
 {
   "rotation_id": 1,
   "user_email": "sample@test",
+  "user_name": "test name",
   "info": {
     "belongs": [
       {
